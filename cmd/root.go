@@ -28,13 +28,13 @@ to quickly create a Cobra application.`,
 		response, err := http.Get("https://orthocal.info/api/gregorian/")
 
 		if err != nil {
-			fmt.Println("there was an issue with the api call: %d", err.Error())
+			fmt.Println("there was an issue with the api call: ", err.Error())
 			os.Exit(1)
 		}
 		responseData, err := io.ReadAll(response.Body)
 
 		if err != nil {
-			fmt.Println("there was an issue with reading the response body: %d", err.Error())
+			fmt.Println("there was an issue with reading the response body: ", err.Error())
 			os.Exit(1)
 		}
 
