@@ -1,9 +1,10 @@
 /*
-Copyright © 2024 NAME HERE <EMAIL ADDRESS>
+Copyright © 2024 Ethan Holen ethanholen@gmail.com
 */
 package cmd
 
 import (
+	"encoding/json"
 	"fmt"
 	"io"
 	"net/http"
@@ -11,6 +12,12 @@ import (
 
 	"github.com/spf13/cobra"
 )
+
+type OrthoResponse struct {
+	Year           int      `json:"year"`
+	PaschaDistance int      `json:"pascha_distance"`
+	Titles         []string `json:"titles"`
+}
 
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
@@ -38,7 +45,11 @@ to quickly create a Cobra application.`,
 			os.Exit(1)
 		}
 
-		fmt.Println(string(responseData))
+		var orthoResponse OrthoResponse
+		json.Unmarshal(responseData, &orthoResponse)
+
+		// fmt.Println(string(responseData))
+		fmt.Printf("%d %d   %s\n", orthoResponse.PaschaDistance, orthoResponse.Year, orthoResponse.Titles[0]) // TODO: do some safety checking here on titles
 
 	},
 }
