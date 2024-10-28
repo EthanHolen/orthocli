@@ -1,0 +1,136 @@
+{
+  "pascha_distance": 173,
+  "julian_day_number": 2460609,
+  "year": 2024,
+  "month": 10,
+  "day": 25,
+  "weekday": 5,
+  "tone": 8,
+  "titles": [
+    "Friday of the 18th week after Pentecost"
+  ],
+  "summary_title": "Martyrs Marcian and Martyrius the Notaries",
+  "feast_level": 0,
+  "feast_level_description": "Liturgy",
+  "feasts": null,
+  "fast_level": 1,
+  "fast_level_desc": "Fast",
+  "fast_exception": 0,
+  "fast_exception_desc": "",
+  "saints": [
+    "Martyrs Marcian and Martyrius the Notaries",
+    "St Tabitha of Joppa"
+  ],
+  "service_notes": null,
+  "abbreviated_reading_indices": [
+    0,
+    1
+  ],
+  "readings": [
+    {
+      "source": "Epistle",
+      "book": "Apostol",
+      "description": "",
+      "display": "Ephesians 6.18-24",
+      "short_display": "Eph 6.18-24",
+      "passage": [
+        {
+          "book": "EPH",
+          "chapter": 6,
+          "verse": 18,
+          "content": "Praying always with all prayer and supplication in the Spirit, and watching thereunto with all perseverance and supplication for all saints;",
+          "paragraph_start": false
+        },
+        {
+          "book": "EPH",
+          "chapter": 6,
+          "verse": 19,
+          "content": "And for me, that utterance may be given unto me, that I may open my mouth boldly, to make known the mystery of the gospel,",
+          "paragraph_start": false
+        },
+        {
+          "book": "EPH",
+          "chapter": 6,
+          "verse": 20,
+          "content": "For which I am an ambassador in bonds: that therein I may speak boldly, as I ought to speak.",
+          "paragraph_start": false
+        },
+        {
+          "book": "EPH",
+          "chapter": 6,
+          "verse": 21,
+          "content": "But that ye also may know my affairs, and how I do, Tychicus, a beloved brother and faithful minister in the Lord, shall make known to you all things:",
+          "paragraph_start": true
+        },
+        {
+          "book": "EPH",
+          "chapter": 6,
+          "verse": 22,
+          "content": "Whom I have sent unto you for the same purpose, that ye might know our affairs, and that he might comfort your hearts.",
+          "paragraph_start": false
+        },
+        {
+          "book": "EPH",
+          "chapter": 6,
+          "verse": 23,
+          "content": "Peace be to the brethren, and love with faith, from God the Father and the Lord Jesus Christ.",
+          "paragraph_start": true
+        },
+        {
+          "book": "EPH",
+          "chapter": 6,
+          "verse": 24,
+          "content": "Grace be with all them that love our Lord Jesus Christ in sincerity. Amen.",
+          "paragraph_start": false
+        }
+      ]
+    },
+    {
+      "source": "Gospel",
+      "book": "Luke",
+      "description": "",
+      "display": "Luke 11.23-26",
+      "short_display": "Luke 11.23-26",
+      "passage": [
+        {
+          "book": "LUK",
+          "chapter": 11,
+          "verse": 23,
+          "content": "He that is not with me is against me: and he that gathereth not with me scattereth.",
+          "paragraph_start": false
+        },
+        {
+          "book": "LUK",
+          "chapter": 11,
+          "verse": 24,
+          "content": "When the unclean spirit is gone out of a man, he walketh through dry places, seeking rest; and finding none, he saith, I will return unto my house whence I came out.",
+          "paragraph_start": false
+        },
+        {
+          "book": "LUK",
+          "chapter": 11,
+          "verse": 25,
+          "content": "And when he cometh, he findeth it swept and garnished.",
+          "paragraph_start": false
+        },
+        {
+          "book": "LUK",
+          "chapter": 11,
+          "verse": 26,
+          "content": "Then goeth he, and taketh to him seven other spirits more wicked than himself; and they enter in, and dwell there: and the last state of that man is worse than the first.",
+          "paragraph_start": false
+        }
+      ]
+    }
+  ],
+  "stories": [
+    {
+      "title": "Holy Martyrs Marcian and Martyrius (346)",
+      "story": "<p>Both lived in Constantinople and were disciples of the Patriarch St Paul the Confessor (November 6), who was murdered in exile by the Arians. During the reign of the Arian Emperor Constantius, they fearlessly confessed that the Son of God is of one essence with the Father and is truly God. For their confession they were beheaded by the Arians and buried outside the city. Soon afterward, miracles began to be wrought at their tomb, and St John Chrysostom later built a church over it.</p>"
+    },
+    {
+      "title": "St Tabitha of Joppa",
+      "story": "<p>She was restored to life by the Apostle Peter (Acts 9:39-40), and afterwards died in peace.</p>"
+    }
+  ]
+}
