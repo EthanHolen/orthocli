@@ -4,20 +4,12 @@ Copyright © 2024 Ethan Holen ethanholen@gmail.com
 package cmd
 
 import (
-	"encoding/json"
 	"fmt"
-	"io"
-	"net/http"
 	"os"
 
+	"github.com/EthanHolen/orthocli/orthoapi"
 	"github.com/spf13/cobra"
 )
-
-type OrthoResponse struct {
-	Year           int      `json:"year"`
-	PaschaDistance int      `json:"pascha_distance"`
-	Titles         []string `json:"titles"`
-}
 
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
@@ -32,24 +24,33 @@ to quickly create a Cobra application.`,
 	// Uncomment the following line if your bare application
 	// has an action associated with it:
 	Run: func(cmd *cobra.Command, args []string) {
-		response, err := http.Get("https://orthocal.info/api/gregorian/")
+		orthoResponse, err := orthoapi.MakeRequest("https://orthocal.info/api/gregorian/")
 
 		if err != nil {
-			fmt.Println("there was an issue with the api call: ", err.Error())
-			os.Exit(1)
-		}
-		responseData, err := io.ReadAll(response.Body)
-
-		if err != nil {
-			fmt.Println("there was an issue with reading the response body: ", err.Error())
+			fmt.Fprintf(os.Stderr, "error retrieving orthoResponse: %e\n", err)
 			os.Exit(1)
 		}
 
-		var orthoResponse OrthoResponse
-		json.Unmarshal(responseData, &orthoResponse)
+		// fmt.Printf("%d %d   %s\n", orthoResponse.PaschaDistance, orthoResponse.Year, orthoResponse.Titles[0]) // TODO: do some safety checking here on titles
+		fmt.Printf(`
+🗓️  Date: (%d-%d-%d) %s
 
-		// fmt.Println(string(responseData))
-		fmt.Printf("%d %d   %s\n", orthoResponse.PaschaDistance, orthoResponse.Year, orthoResponse.Titles[0]) // TODO: do some safety checking here on titles
+🍽️  Fasting: %d %s
+🍽️  Feast: %d %s
+
+📚 Readings:
+
+👑 Saints:
+
+`, orthoResponse.Month,
+			orthoResponse.Day,
+			orthoResponse.Year,
+			orthoResponse.Titles[0],
+			orthoResponse.FastLevel,
+			orthoResponse.FastLevelDescription,
+			orthoResponse.FeastLevel,
+			orthoResponse.FeastLevelDescription,
+		)
 
 	},
 }
