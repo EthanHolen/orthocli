@@ -30,10 +30,6 @@ func GetFullResponse(calendarType string) (OrthoResponse, error) {
 
 	var orthoResponse OrthoResponse
 
-	// Find the temp dir or create it
-
-	// Read from the proper file and load it into a struct
-
 	// TODO: move all of this logic to the function meant to pull the entire year
 	apiResponse, err := makeApiRequest(DEFAULT_URL)
 
